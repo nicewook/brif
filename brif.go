@@ -11,10 +11,10 @@ type Brif struct {
 	Config *Config
 }
 
-func newBrif() Brif {
+func NewBrif() *Brif {
 
 	log.Println("Create Brif")
-	return Brif{
+	return &Brif{
 		Config: &Config{Version: "v0.1.0"},
 	}
 }
