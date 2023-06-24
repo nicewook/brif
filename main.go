@@ -7,24 +7,8 @@ import (
 	"github.com/urfave/cli/v2"
 )
 
-type Config struct {
-	Version string
-}
-type Brif struct {
-	Config *Config
-}
-
-func newBrif() Brif {
-
-	log.Println("Create Brif")
-	return Brif{
-		Config: &Config{Version: "v0.1.0"},
-	}
-}
-
 func Run(*cli.Context) error {
 
-	log.Println("Create Brif")
 	brif := newBrif()
 	_ = brif
 	return nil
